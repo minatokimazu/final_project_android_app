@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#71DDDD"
+    tools:context=".GreenLightFamily">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="311dp"
+        android:layout_height="25dp"
+        android:text="@string/welcome_to_the_greenlight_family"
+        android:textColor="#0A0101"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="370dp"
+        android:layout_height="135dp"
+        android:src="@drawable/rectangle_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/our_promise"
+        android:textColor="#0A0101"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="338dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/we_promise_to_be_completely_committed_to_our_members_and_their_needs_and_to_never_forget_the_contributions_that_our_leaders_our_members_and_those_who_came_before_us_have_made_to_our_profession"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+
+        android:id="@+id/imageView2"
+        android:layout_width="399dp"
+        android:layout_height="437dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/rectangle_5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="526dp"
+        android:text="@string/our_privacy_policy"
+        android:textColor="#0A0101"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.207"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="290dp"
+        android:layout_height="379dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/ceng319_built_the_greenlight_app_as_a_free_app_this_service_is_provided_by_ceng319_at_no_cost_and_is_intended_for_use_as_is_this_app_is_used_to_inform_visitors_regarding_my_policies_with_the_collection_use_and_disclosure_of_personal_information_if_anyone_decided_to_use_my_service_n_if_you_choose_to_use_my_service_then_you_agree_to_the_collection_and_use_of_information_in_relation_to_this_policy_i_will_not_use_or_share_your_information_with_anyone_except_as_described_in_this_privacy_policy_the_terms_used_in_this_privacy_policy_have_the_same_meanings_as_in_our_terms_and_conditions_which_is_accessible_at_greenlight_unless_otherwise_defined_in_this_privacy_policy_n_security_n_i_value_your_trust_in_providing_us_your_personal_information_thus_we_are_striving_to_use_commercially_acceptable_means_of_protecting_it_but_remember_that_no_method_of_transmission_over_the_internet_or_method_of_electronic_storage_is_100_secure_and_reliable_and_i_cannot_guarantee_its_absolute_security_n_children_s_privacy_n_these_services_do_not_address_anyone_under_the_age_of_13_i_do_not_knowingly_collect_personally_identifiable_information_from_children_under_13_in_the_case_i_discover_that_a_child_under_13_has_provided_me_with_personal_information_i_immediately_delete_this_from_our_servers_if_you_are_a_parent_or_guardian_and_you_are_aware_that_your_child_has_provided_us_with_personal_information_please_contact_me_so_that_i_will_be_able_to_do_necessary_actions_n_changes_to_this_privacy_policy_n_greenlight_reserves_the_right_to_modify_this_privacy_policy_at_any_time_and_may_apply_changes_to_previously_collected_information_as_permitted_by_applicable_law_we_encourage_you_to_review_this_privacy_policy_from_time_to_time_for_any_updates_you_acknowledge_and_agree_that_we_may_notify_you_about_any_material_changes_in_the_way_we_treat_personal_information_by_posting_an_updated_version_of_the_privacy_policy_on_this_page_this_policy_is_effective_as_of_2020_10_03_n_contact_us_n_if_you_have_any_questions_or_suggestions_about_my_privacy_policy_do_not_hesitate_to_contact_me_at_1_437_772_9361"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RadioGroup
+        android:id="@+id/groupAccept"
+        android:layout_width="226dp"
+        android:layout_height="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:text="@string/i_totally_agree_with_this_policy" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/i_don_t_agree_with_this_policy" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="141dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/submit"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/groupAccept"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

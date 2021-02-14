@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">project_group_13</string>
+    <string name="title_activity_menuleft">menuleft</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="title_activity_menu_right">MenuRight</string>
+    <string name="title_activity_menu_right_ne">MenuRightNe</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="my_profile">My Profile</string>
+    <string name="my_order">My Order</string>
+    <string name="security">Security</string>
+    <string name="payment">Payment Info</string>
+    <string name="backmain">Go Back To Main Menu</string>
+    <string name="greenlight"><b>GreenLight Services and Promotions</b> \nStay in the know about all things GreenLight.
+    \nGet the latest product updates, upcoming
+    events, and GreenLight promos.</string>
+    <string name="partner"><b>Partner Offers</b> \nBe the first to receive exclusive student
+discounts, coupons, and promos from our
+friends and partners.</string>
+    <string name="unsubscribe"><b>Unsubscribe from all emails</b> \nBy clicking this operation, I understand
+that I will continue to receive transactional
+emails such as order and shipment
+confirmation emails as outlined in
+GreenLight\'s privacy policy. We already
+miss you!</string>
+
+    <string name="greenlight_gold_3_99_mo">GreenLight Gold ($3.99/mo)</string>
+    <string name="greenlight_platinum_9_99_6mo">GreenLight Platinum ($9.99/6mo)</string>
+    <string name="greenlight_diamond_19_99_year">GreenLight Diamond($19.99/year)</string>
+    <string name="join_in_green_light_membership_and_open_a_door_to_endless_creativities">Join in Green Light membership and open a door to endless creativities</string>
+    <string name="a_whole_new_world">A Whole New World</string>
+    <string name="our_promise">Our Promise</string>
+    <string name="welcome_to_the_greenlight_family">Welcome to the GreenLight Family</string>
+    <string name="our_privacy_policy">Our Privacy Policy</string>
+    <string name="we_promise_to_be_completely_committed_to_our_members_and_their_needs_and_to_never_forget_the_contributions_that_our_leaders_our_members_and_those_who_came_before_us_have_made_to_our_profession">We promise to be completely committed to our members and their needs and to never forget the contributions that our leaders, our members and those who came before us have made to our profession.</string>
+    <string name="ceng319_built_the_greenlight_app_as_a_free_app_this_service_is_provided_by_ceng319_at_no_cost_and_is_intended_for_use_as_is_this_app_is_used_to_inform_visitors_regarding_my_policies_with_the_collection_use_and_disclosure_of_personal_information_if_anyone_decided_to_use_my_service_n_if_you_choose_to_use_my_service_then_you_agree_to_the_collection_and_use_of_information_in_relation_to_this_policy_i_will_not_use_or_share_your_information_with_anyone_except_as_described_in_this_privacy_policy_the_terms_used_in_this_privacy_policy_have_the_same_meanings_as_in_our_terms_and_conditions_which_is_accessible_at_greenlight_unless_otherwise_defined_in_this_privacy_policy_n_security_n_i_value_your_trust_in_providing_us_your_personal_information_thus_we_are_striving_to_use_commercially_acceptable_means_of_protecting_it_but_remember_that_no_method_of_transmission_over_the_internet_or_method_of_electronic_storage_is_100_secure_and_reliable_and_i_cannot_guarantee_its_absolute_security_n_children_s_privacy_n_these_services_do_not_address_anyone_under_the_age_of_13_i_do_not_knowingly_collect_personally_identifiable_information_from_children_under_13_in_the_case_i_discover_that_a_child_under_13_has_provided_me_with_personal_information_i_immediately_delete_this_from_our_servers_if_you_are_a_parent_or_guardian_and_you_are_aware_that_your_child_has_provided_us_with_personal_information_please_contact_me_so_that_i_will_be_able_to_do_necessary_actions_n_changes_to_this_privacy_policy_n_greenlight_reserves_the_right_to_modify_this_privacy_policy_at_any_time_and_may_apply_changes_to_previously_collected_information_as_permitted_by_applicable_law_we_encourage_you_to_review_this_privacy_policy_from_time_to_time_for_any_updates_you_acknowledge_and_agree_that_we_may_notify_you_about_any_material_changes_in_the_way_we_treat_personal_information_by_posting_an_updated_version_of_the_privacy_policy_on_this_page_this_policy_is_effective_as_of_2020_10_03_n_contact_us_n_if_you_have_any_questions_or_suggestions_about_my_privacy_policy_do_not_hesitate_to_contact_me_at_1_437_772_9361">CENG319 built the GreenLight app as a Free app. This app is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service. \n Security \n I value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and I cannot guarantee its absolute security. \n Children’s Privacy \n These Services do not address anyone under the age of 13. I do not knowingly collect personally identifiable information from children under 13. In the case I discover that a child under 13 has provided me with personal information, I immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact me so that I will be able to do necessary actions. \n Changes to This Privacy Policy \n Greenlight reserves the right to modify this Privacy Policy at any time and may apply changes to previously collected information, as permitted by applicable law. Tdo not hesitate to contact me at (+1) 437-772-9361.</string>
+    <string name="i_totally_agree_with_this_policy">I totally agree with this policy</string>
+    <string name="i_don_t_agree_with_this_policy">I don\'t agree with this policy</string>
+    <string name="submit">SUBMIT</string>
+    <string name="membership_types_and_benefits">Membership Types and Benefits</string>
+    <string name="gold_member">Gold Member</string>
+    <string name="platinum_member">Platinum Member</string>
+    <string name="diamond_member">Diamond Member</string>
+    <string name="_3_99_per_month">. $3.99 per month</string>
+    <string name="_9_99_for_6_months_n_bonus_free_1_month_n_10_discount_for_resubscription_n_1_week_extend_to_re_subscribe_when_cancelled_subscription">. $9.99 for 6 months \n . Bonus free 1 month \n . 10% discount for resubscription \n . 1 week extend to re-subscribe when cancelled subscription</string>
+    <string name="_19_99_per_year_n_bonus_free_3_months_n_15_discount_for_resubscription_n_2_weeks_extend_to_re_subscribe_when_cancelled_subscription">. $19.99 per year \n . Bonus free 3 months \n . 15% discount for resubscription \n . 2 weeks extend to re-subscribe when cancelled subscription</string>
+    <string name="your_order_selection">Your Order Selection</string>
+    <string name="greenlight_membership_registration">GreenLight Membership Registration</string>
+    <string name="name">Name</string>
+    <string name="e_mail">E-mail</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="address">Address</string>
+    <string name="birth_date">Birth Date</string>
+    <string name="where_did_you_hear_about_us">Where did you hear about us?</string>
+</resources>

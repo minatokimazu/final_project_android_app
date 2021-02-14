@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.project_group_13">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Project_group_13">
+        <activity android:name=".AboutUs"></activity>
+        <activity android:name=".ThankYou" />
+        <activity android:name=".Payment" />
+        <activity android:name=".Types" />
+        <activity android:name=".Registration" />
+        <activity android:name=".GreenLightFamily" />
+        <activity android:name=".SubsActivity" />
+        <activity android:name=".Chaydima" />
+        <activity android:name=".ManualSetup100" />
+        <activity android:name=".LighControl100" />
+        <activity android:name=".AutoMode100" />
+        <activity android:name=".MenuLeft" />
+        <activity android:name=".SecurityNg" />
+        <activity android:name=".Payment2Tan" />
+        <activity android:name=".Payment1Tan" />
+        <activity android:name=".Myorder3Duc" />
+        <activity android:name=".Myorder2Duc" />
+        <activity android:name=".Myorder1Duc" />
+        <activity android:name=".CommunicationEmailMinh" />
+        <activity android:name=".MyProfileMinh" />
+        <activity android:name=".MenuRight" />
+        <activity
+            android:name=".ui.MenuRightNe"
+            android:label="@string/title_activity_menu_right_ne"
+            android:theme="@style/Theme.Project_group_13.NoActionBar" />
+        <activity
+            android:name=".MenuRightActivity"
+            android:label="@string/title_activity_menu_right"
+            android:theme="@style/Theme.Project_group_13.NoActionBar" />
+        <activity
+            android:name=".ui.MenuRightActivity"
+            android:label="@string/title_activity_menu_right"
+            android:theme="@style/Theme.Project_group_13.NoActionBar" />
+        <activity android:name=".MainScreen" />
+        <activity android:name=".GreetingScreen" />
+        <activity android:name=".ForgotPassword" />
+        <activity android:name=".SignIn" />
+        <activity android:name=".ThanksForRegistration" />
+        <activity android:name=".SignUpScreen3" />
+        <activity android:name=".SignUpScreen2" />
+        <activity android:name=".SignUpScreen1" />
+        <activity android:name=".StartingScreen" />
+        <activity android:name=".WelcomeScreen2" />
+        <activity android:name=".WelcomeScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
