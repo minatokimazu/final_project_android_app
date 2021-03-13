@@ -67,4 +67,5 @@ miss you!</string>
     <string name="address">Address</string>
     <string name="birth_date">Birth Date</string>
     <string name="where_did_you_hear_about_us">Where did you hear about us?</string>
+    <string name="data_unavailable">Data is not available</string>
 </resources>

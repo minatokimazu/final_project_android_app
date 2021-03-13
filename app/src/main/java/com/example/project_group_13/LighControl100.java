@@ -3,6 +3,18 @@ package com.example.project_group_13;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import android.util.Log;
+import android.widget.Toast;
+import com.example.project_group_13.DataStructure;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -10,88 +22,132 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
+
 import android.widget.TextView;
 
-import java.util.Timer;
-import java.util.TimerTask;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 public class LighControl100 extends AppCompatActivity {
-
-    ImageView congtac, threetia, left ,right;
-    TextView note, nhietdo, doam, pressure;
-    int count = 0;
-    int pe = 0;
-    double temp = 10.2;
-    double humi = 60.5;
-    double pres= 1031.4;
+    private FirebaseDatabase database;
+    private DatabaseReference myRef;
+    DataStructure mData;
+    private TextView temperature, humidity, uv, timestamp, lux;
     DrawerLayout drawerLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ligh_control100);
         drawerLayout = findViewById(R.id.drawer_layout);
-        threetia = findViewById(R.id.threetia);
-        congtac = findViewById(R.id.congtac);
-        note = findViewById(R.id.note);
-        nhietdo = findViewById(R.id.nhietdo);
-        doam = findViewById(R.id.doam);
-        pressure = findViewById(R.id.pressure);
-        note.setText("Press to turn on");
-        nhietdo.setText("Temperature:"+temp+"(C)temperature");
-        doam.setText("Humidity:"+humi+"%");
-        pressure.setText("Pressure:"+pres+"hPa");
+            getDatabase();
+            findAllViews();
+            reterieveData();
+    }
+    private void findAllViews(){
+        uv = findViewById(R.id.uv);
+        lux = findViewById(R.id.lux);
+        temperature = findViewById(R.id.temperature);
+        humidity = findViewById(R.id.humidity);
+        timestamp = findViewById(R.id.timestamp);
+    }
 
+    private void getDatabase(){
+        // TODO: Find the reference form the database.
+        database = FirebaseDatabase.getInstance();
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        String path = "userdata/" + mAuth.getUid();  // read from the user account.
+        myRef = database.getReference(path);
+    }
 
-        congtac.setOnClickListener(new View.OnClickListener() {
+    private void reterieveData(){
+        // TODO: Get the data on a single node.
+        myRef.addChildEventListener(new ChildEventListener() {
             @Override
-            public void onClick(View v) {
-                count++;
-                if(count%2!=0){
-                    congtac.setImageResource(R.drawable.congtacxanh);
-                    threetia.setImageResource(R.drawable._tia);
-                    note.setText("Press to turn off");
-                } else {
-                    congtac.setImageResource(R.drawable.congtacdo);
-                    threetia.setImageDrawable(null);
-                    note.setText("Press to turn on");
-                }
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                DataStructure ds = dataSnapshot.getValue(DataStructure.class);
+                lux.setText("Light: "+ ds.getLight());
+                temperature.setText("Temperature: "+ds.getTemperature());
+                humidity.setText("Humidity: " + ds.getHumidity());
+                uv.setText("UV: " + ds.getUV());
+
+                // Convert from timestamp to Date and time
+                timestamp.setText(convertTimestamp(Long.toString(ds.getTimestamp())));
+            }
+
+            private String convertTimestamp(String timestamp){
+
+                long yourSeconds = Long.valueOf(timestamp);   // wrong code. fix this.
+                Date mDate = new Date(yourSeconds * 1000);
+                DateFormat df = new SimpleDateFormat("dd MMM yyyy hh:mm:ss a");
+                return df.format(mDate);
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                DataStructure ds = dataSnapshot.getValue(DataStructure.class);
+                lux.setText("Light: "+ ds.getLight());
+                temperature.setText("Temperature: "+ds.getTemperature());
+                humidity.setText("Humidity: " + ds.getHumidity());
+                uv.setText("UV: " + ds.getUV());
+
+                // Convert from timestamps to Date and time
+                timestamp.setText(convertTimestamp(Long.toString(ds.getTimestamp())));
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
             }
         });
 
-        new Timer().schedule(new TimerTask(){
+        // TODO: Get the whole data array on a reference.
+        myRef.addValueEventListener(new ValueEventListener() {
             @Override
-            public void run() {
-                runOnUiThread(new Runnable(){
-                    @Override
-                    public void run() {
-                        pe++;
-                        if(pe%3==0){
-                            temp=temp+0.5;
-                            humi=humi+1;
-                            pres=pres+4;
-                            nhietdo.setText(temp+"(C)");
-                            doam.setText(humi+"%");
-                            pressure.setText(pres+"hPa");
-                        } else if(pe%3==1){
-                            temp=temp-1;
-                            humi=humi-1.5;
-                            pres=pres-3;
-                            nhietdo.setText(temp+"(C)");
-                            doam.setText(humi+"%");
-                            pressure.setText(pres+"hPa");
-                        } else{
-                            temp=temp+0.5;
-                            humi=humi+0.5;
-                            pres=pres-1;
-                            nhietdo.setText(temp+"(C)");
-                            doam.setText(humi+"%");
-                            pressure.setText(pres+"hPa");
-                        }
-                    };
-                });
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                List<DataStructure> arraylist= new ArrayList<DataStructure>();
+
+                // TODO: Now data is retrieved, needs to process data.
+                if (dataSnapshot != null && dataSnapshot.getValue() != null) {
+
+                    // iterate all the items in the dataSnapshot
+                    for (DataSnapshot a : dataSnapshot.getChildren()) {
+                        DataStructure dataStructure = new DataStructure();
+                        dataStructure.setLight(a.getValue(DataStructure.class).getLight());
+                        dataStructure.setTemperature(a.getValue(DataStructure.class).getTemperature());
+                        dataStructure.setHumidity(a.getValue(DataStructure.class).getHumidity());
+                        dataStructure.setUV(a.getValue(DataStructure.class).getUV());
+                        dataStructure.setTimestamp(a.getValue(DataStructure.class).getTimestamp());
+
+                        arraylist.add(dataStructure);  // now all the data is in arraylist.
+                        Log.d("GreenLight", "dataStructure " + dataStructure.getTimestamp());
+                    }
+                }else
+                {
+                    Toast.makeText(getApplicationContext(), getString(R.string.data_unavailable), Toast.LENGTH_LONG).show();
+                }
+
             }
-        }, 100, 1000);
+
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                // Getting data failed, log a message
+                Log.d("GreenLight", "Data Loading Canceled/Failed.", databaseError.toException());
+            }
+        });
     }
     public void ClickMenu(View view){
         //Open drawer
