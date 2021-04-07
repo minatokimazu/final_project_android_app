@@ -68,7 +68,7 @@ public class LighControl100 extends AppCompatActivity {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 DataStructure ds = dataSnapshot.getValue(DataStructure.class);
-                lux.setText("Light: "+ ds.getLight());
+                lux.setText(ds.getLight() + " lux");
                 temperature.setText("Temperature: "+ds.getTemperature());
                 humidity.setText("Humidity: " + ds.getHumidity());
                 uv.setText("UV: " + ds.getUV());

@@ -21,54 +21,54 @@
 
             <TextView
                 android:id="@+id/timestamp"
-                android:layout_width="377dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:gravity="center_vertical"
-                app:layout_constraintStart_toStartOf="@+id/textView51"
-                app:layout_constraintTop_toBottomOf="@+id/textView51" />
+                app:layout_constraintStart_toEndOf="@+id/textView51"
+                app:layout_constraintTop_toTopOf="@+id/textView51" />
 
             <TextView
                 android:id="@+id/lux"
-                android:layout_width="382dp"
-                android:layout_height="47dp"
-                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
                 android:gravity="center_vertical"
-                app:layout_constraintStart_toStartOf="@+id/light"
-                app:layout_constraintTop_toBottomOf="@+id/light" />
+                app:layout_constraintStart_toEndOf="@+id/light"
+                app:layout_constraintTop_toTopOf="@+id/light" />
 
             <TextView
                 android:id="@+id/textView51"
-                android:layout_width="71dp"
-                android:layout_height="27dp"
-                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/algerian"
                 android:text="Timestamp"
                 android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="@+id/lux"
-                app:layout_constraintTop_toBottomOf="@+id/lux" />
+                app:layout_constraintStart_toStartOf="@+id/light"
+                app:layout_constraintTop_toBottomOf="@+id/light" />
 
             <TextView
                 android:id="@+id/light"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/algerian"
                 android:text="Light"
                 android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="@+id/uv"
-                app:layout_constraintTop_toBottomOf="@+id/uv" />
+                app:layout_constraintStart_toStartOf="@+id/textView50"
+                app:layout_constraintTop_toBottomOf="@+id/textView50" />
 
             <TextView
                 android:id="@+id/textView50"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/algerian"
                 android:text="UV"
                 android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="@+id/humidity"
-                app:layout_constraintTop_toBottomOf="@+id/humidity" />
+                app:layout_constraintStart_toStartOf="@+id/textView47"
+                app:layout_constraintTop_toBottomOf="@+id/textView47" />
 
             <ImageView
                 android:id="@+id/imageView7"
@@ -100,32 +100,34 @@
 
             <TextView
                 android:id="@+id/uv"
-                android:layout_width="386dp"
-                android:layout_height="38dp"
-                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
                 android:gravity="center_vertical"
-                app:layout_constraintStart_toStartOf="@+id/textView50"
-                app:layout_constraintTop_toBottomOf="@+id/textView50" />
+                app:layout_constraintStart_toEndOf="@+id/textView50"
+                app:layout_constraintTop_toTopOf="@+id/textView50" />
 
             <TextView
                 android:id="@+id/humidity"
-                android:layout_width="385dp"
-                android:layout_height="37dp"
-                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
                 android:gravity="center_vertical"
                 android:textAlignment="viewStart"
-                app:layout_constraintStart_toStartOf="@+id/textView47"
-                app:layout_constraintTop_toBottomOf="@+id/textView47" />
+                app:layout_constraintBottom_toBottomOf="@+id/textView47"
+                app:layout_constraintStart_toEndOf="@+id/textView47"
+                app:layout_constraintTop_toTopOf="@+id/textView47" />
 
             <TextView
                 android:id="@+id/temperature"
-                android:layout_width="388dp"
-                android:layout_height="32dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
                 android:gravity="left"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/textView46"
-                app:layout_constraintTop_toBottomOf="@+id/textView46"
-                app:layout_constraintVertical_bias="0.021" />
+                app:layout_constraintBottom_toBottomOf="@+id/textView46"
+                app:layout_constraintStart_toEndOf="@+id/textView46"
+                app:layout_constraintTop_toTopOf="@+id/textView46"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/note"
@@ -140,8 +142,8 @@
 
             <TextView
                 android:id="@+id/textView46"
-                android:layout_width="88dp"
-                android:layout_height="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/algerian"
@@ -154,12 +156,12 @@
                 android:id="@+id/textView47"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/algerian"
                 android:text="Humidity"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/textView46"
-                app:layout_constraintTop_toBottomOf="@+id/temperature" />
+                app:layout_constraintTop_toBottomOf="@+id/textView46" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
