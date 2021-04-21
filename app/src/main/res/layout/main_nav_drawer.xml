@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:background="#D06478D3"
+    android:background="#C60F52BA"
     android:orientation="vertical">
 
     <TextView
@@ -14,8 +14,8 @@
         android:text="Green Light"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textColor="@color/theme_1"
+        android:textSize="36sp"
         android:textStyle="bold|italic" />
 
     <View
@@ -23,13 +23,13 @@
         android:layout_height="1dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:background="#636363" />
+        android:background="@color/white" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:onClick="AutoMode"
+        android:onClick="Home"
         android:orientation="horizontal">
 
         <TextView
@@ -37,11 +37,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_weight="1"
-            android:fontFamily="sans-serif-light"
+            android:fontFamily="monospace"
             android:padding="12dp"
-            android:text="Auto Mode"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:text="Home"
+            android:textColor="@color/theme_1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -49,7 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:onClick="LightControl"
+        android:onClick="EnvironmentData"
         android:orientation="horizontal">
 
         <TextView
@@ -57,11 +58,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_weight="1"
-            android:fontFamily="sans-serif-light"
+            android:fontFamily="monospace"
             android:padding="12dp"
-            android:text="Light Control"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:text="Environment Data"
+            android:textColor="@color/theme_1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
 
     </LinearLayout>
@@ -78,20 +80,24 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_weight="1"
-            android:fontFamily="sans-serif-light"
+            android:fontFamily="monospace"
             android:padding="12dp"
             android:text="Manual Setup"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textAlignment="viewStart"
+            android:textColor="@color/theme_1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
 
     </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:background="#636363" />
+        android:background="@color/white" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -104,32 +110,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_weight="1"
-            android:fontFamily="sans-serif-light"
+            android:fontFamily="monospace"
             android:padding="12dp"
             android:text="My Profile"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:onClick="Subcription"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_weight="1"
-            android:fontFamily="sans-serif-light"
-            android:padding="12dp"
-            android:text="Subcription"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textColor="@color/theme_1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
 
     </LinearLayout>
@@ -146,11 +132,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_weight="1"
-            android:fontFamily="sans-serif-light"
+            android:fontFamily="monospace"
             android:padding="12dp"
             android:text="About Us"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textColor="@color/theme_1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
 
     </LinearLayout>
@@ -167,11 +154,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_weight="1"
-            android:fontFamily="sans-serif-light"
+            android:fontFamily="monospace"
             android:padding="12dp"
             android:text="Communication"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textColor="@color/theme_1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
 
     </LinearLayout>
@@ -181,7 +169,7 @@
         android:layout_height="1dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:background="#636363" />
+        android:background="@color/white" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -195,11 +183,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_weight="1"
-            android:fontFamily="sans-serif-light"
+            android:fontFamily="monospace"
             android:padding="12dp"
-            android:text="Logout"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:text="Exit"
+            android:textColor="@color/theme_1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
