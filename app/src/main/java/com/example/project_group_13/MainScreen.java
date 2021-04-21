@@ -9,10 +9,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 public class MainScreen extends AppCompatActivity {
     DrawerLayout drawerLayout;
@@ -29,29 +26,24 @@ public class MainScreen extends AppCompatActivity {
         openDrawer(drawerLayout);
     }
 
-    public void AutoMode(View view){
+    public void Home(View view){
         //Recreate activity
-        redirectActivity(this,AutoMode100.class);
+        redirectActivity(this,MainScreen.class);
     }
 
-    public void LightControl(View view){
+    public void EnvironmentData(View view){
         //Redirect activity to dashboard
-        redirectActivity(this,LighControl100.class);
+        redirectActivity(this, EnvironmentData.class);
     }
 
     public void ManualSetup(View view){
         //redirect activity to about us
-        redirectActivity(this,ManualSetup100.class);
+        redirectActivity(this, Advise.class);
     }
 
     public void MyProfile(View view){
         //redirect activity to about us
         redirectActivity(this,MyProfileMinh.class);
-    }
-
-    public void Subcription(View view){
-        //redirect activity to about us
-        redirectActivity(this,SubsActivity.class);
     }
 
     public void AboutUs(View view){

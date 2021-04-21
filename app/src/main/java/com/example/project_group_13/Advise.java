@@ -10,45 +10,45 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
+import com.example.project_group_13.EnvironmentData;
 
-public class AutoMode100 extends AppCompatActivity {
+public class Advise extends AppCompatActivity {
     DrawerLayout drawerLayout;
+    private TextView time;
+    String date1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_auto_mode100);
-
+        setContentView(R.layout.activity_advise);
         drawerLayout = findViewById(R.id.drawer_layout);
+        time = findViewById(R.id.info1);
     }
-
+    
     public void ClickMenu(View view){
         //Open drawer
         openDrawer(drawerLayout);
     }
 
-    public void AutoMode(View view){
+    public void Home(View view){
         //Recreate activity
-        redirectActivity(this,AutoMode100.class);
+        redirectActivity(this,MainScreen.class);
     }
 
-    public void LightControl(View view){
+    public void EnvironmentData(View view){
         //Redirect activity to dashboard
-        redirectActivity(this,LighControl100.class);
+        redirectActivity(this, EnvironmentData.class);
     }
 
     public void ManualSetup(View view){
         //redirect activity to about us
-        redirectActivity(this,ManualSetup100.class);
+        redirectActivity(this, Advise.class);
     }
 
     public void MyProfile(View view){
         //redirect activity to about us
         redirectActivity(this,MyProfileMinh.class);
-    }
-
-    public void Subcription(View view){
-        //redirect activity to about us
-        redirectActivity(this,SubsActivity.class);
     }
 
     public void AboutUs(View view){

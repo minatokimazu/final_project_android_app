@@ -14,21 +14,21 @@
         android:orientation="vertical">
         <include
             layout="@layout/main_toolbar"/>
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/white"
-            tools:context=".MainScreen"
-            android:paddingTop="40dp">
+            android:background="#FFC7D6"
+            android:paddingTop="40dp"
+            tools:context=".MainScreen">
 
             <TextView
                 android:id="@+id/textView15"
                 android:layout_width="372dp"
                 android:layout_height="63dp"
                 android:layout_marginTop="36dp"
-                android:background="#FFFFFF"
                 android:text="Very suitable for letting trees outside of the door"
-                android:textColor="@color/black"
+                android:textColor="@color/word_1"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="@+id/textView14"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -36,18 +36,16 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
 
-
             <TextView
                 android:id="@+id/textView13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="56dp"
                 android:text="Notification"
                 android:textColor="@color/notifycolor"
                 android:textSize="30sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView18" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView14"
@@ -55,7 +53,7 @@
                 android:layout_height="63dp"
                 android:layout_marginTop="96dp"
                 android:text="Today, the weather is warn, not so much hard sun-light"
-                android:textColor="@color/black"
+                android:textColor="#0F52BA"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.761"

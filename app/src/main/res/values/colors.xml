@@ -12,4 +12,6 @@
     <color name="theme3">#91e37f</color>
     <color name="notifycolor">#f75952ca</color>
     <color name="theme_menu"> #2dcbcb</color>
+    <color name="word_1">#0F52BA</color>
+    <color name="theme_1">#FFC7D6</color>
 </resources>

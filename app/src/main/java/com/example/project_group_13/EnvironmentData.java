@@ -6,8 +6,9 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.util.Log;
+import android.widget.ProgressBar;
 import android.widget.Toast;
-import com.example.project_group_13.DataStructure;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -31,16 +32,21 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class LighControl100 extends AppCompatActivity {
+public class EnvironmentData extends AppCompatActivity {
+    private ProgressBar pg_temp;
+    private ProgressBar pg_light;
+    private ProgressBar pg_hum;
+    private ProgressBar pg_uv;
     private FirebaseDatabase database;
     private DatabaseReference myRef;
+    public String date;
     DataStructure mData;
     private TextView temperature, humidity, uv, timestamp, lux;
     DrawerLayout drawerLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ligh_control100);
+        setContentView(R.layout.activity_environment_data);
         drawerLayout = findViewById(R.id.drawer_layout);
             getDatabase();
             findAllViews();
@@ -62,26 +68,38 @@ public class LighControl100 extends AppCompatActivity {
         myRef = database.getReference(path);
     }
 
-    private void reterieveData(){
+    public void reterieveData(){
         // TODO: Get the data on a single node.
         myRef.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 DataStructure ds = dataSnapshot.getValue(DataStructure.class);
-                lux.setText(ds.getLight() + " lux");
-                temperature.setText("Temperature: "+ds.getTemperature());
-                humidity.setText("Humidity: " + ds.getHumidity());
-                uv.setText("UV: " + ds.getUV());
+                lux.setText(ds.getLight() + "lux");
+                temperature.setText(ds.getTemperature() + "℃");
+                humidity.setText(ds.getHumidity() + "%");
+                uv.setText(ds.getUV() + "index");
 
                 // Convert from timestamp to Date and time
                 timestamp.setText(convertTimestamp(Long.toString(ds.getTimestamp())));
+
+                pg_temp = (ProgressBar)findViewById(R.id.pgtem);
+                pg_temp.setProgress((int) ds.getTemperature());
+
+                pg_light = (ProgressBar)findViewById(R.id.pglux);
+                pg_light.setProgress((int) ds.getLight());
+
+                pg_hum = (ProgressBar)findViewById(R.id.pghum);
+                pg_hum.setProgress((int) ds.getHumidity());
+
+                pg_uv = (ProgressBar)findViewById(R.id.pguv);
+                pg_uv.setProgress((int) ds.getUV());
             }
 
             private String convertTimestamp(String timestamp){
 
-                long yourSeconds = Long.valueOf(timestamp);   // wrong code. fix this.
+                long yourSeconds = Long.valueOf(timestamp);
                 Date mDate = new Date(yourSeconds * 1000);
-                DateFormat df = new SimpleDateFormat("dd MMM yyyy hh:mm:ss a");
+                DateFormat df = new SimpleDateFormat("dd MMM yyyy HH:mm:ss aa");
                 return df.format(mDate);
             }
 
@@ -94,7 +112,8 @@ public class LighControl100 extends AppCompatActivity {
                 uv.setText("UV: " + ds.getUV());
 
                 // Convert from timestamps to Date and time
-                timestamp.setText(convertTimestamp(Long.toString(ds.getTimestamp())));
+                date = convertTimestamp(Long.toString(ds.getTimestamp()));
+                timestamp.setText(date);
             }
 
             @Override
@@ -154,29 +173,24 @@ public class LighControl100 extends AppCompatActivity {
         openDrawer(drawerLayout);
     }
 
-    public void AutoMode(View view){
+    public void Home(View view){
         //Recreate activity
-        redirectActivity(this,AutoMode100.class);
+        redirectActivity(this,MainScreen.class);
     }
 
-    public void LightControl(View view){
+    public void EnvironmentData(View view){
         //Redirect activity to dashboard
-        redirectActivity(this,LighControl100.class);
+        redirectActivity(this, EnvironmentData.class);
     }
 
     public void ManualSetup(View view){
         //redirect activity to about us
-        redirectActivity(this,ManualSetup100.class);
+        redirectActivity(this, Advise.class);
     }
 
     public void MyProfile(View view){
         //redirect activity to about us
         redirectActivity(this,MyProfileMinh.class);
-    }
-
-    public void Subcription(View view){
-        //redirect activity to about us
-        redirectActivity(this,SubsActivity.class);
     }
 
     public void AboutUs(View view){

@@ -17,10 +17,8 @@
         <activity android:name=".GreenLightFamily" />
         <activity android:name=".SubsActivity" />
         <activity android:name=".Chaydima" />
-        <activity android:name=".ManualSetup100" />
-        <activity android:name=".LighControl100" />
-        <activity android:name=".AutoMode100" />
-        <activity android:name=".MenuLeft" />
+        <activity android:name=".Advise" />
+        <activity android:name=".EnvironmentData" />
         <activity android:name=".SecurityNg" />
         <activity android:name=".Payment2Tan" />
         <activity android:name=".Payment1Tan" />
@@ -29,7 +27,6 @@
         <activity android:name=".Myorder1Duc" />
         <activity android:name=".CommunicationEmailMinh" />
         <activity android:name=".MyProfileMinh" />
-        <activity android:name=".MenuRight" />
         <activity
             android:name=".ui.MenuRightNe"
             android:label="@string/title_activity_menu_right_ne"
