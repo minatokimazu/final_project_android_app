@@ -52,7 +52,7 @@
                 android:layout_marginTop="20dp"
                 android:indeterminate="false"
                 android:indeterminateTint="#BD3939"
-                android:max="1000"
+                android:max="10000"
                 android:progressTint="#F7FF8B"
                 app:layout_constraintStart_toStartOf="@+id/light"
                 app:layout_constraintTop_toBottomOf="@+id/light" />
@@ -240,7 +240,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="monospace"
-                android:text="1000lux"
+                android:text="10000Lv"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toTopOf="@+id/pglux"
                 app:layout_constraintEnd_toEndOf="@+id/pglux" />

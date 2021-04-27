@@ -27,18 +27,6 @@
         <activity android:name=".Myorder1Duc" />
         <activity android:name=".CommunicationEmailMinh" />
         <activity android:name=".MyProfileMinh" />
-        <activity
-            android:name=".ui.MenuRightNe"
-            android:label="@string/title_activity_menu_right_ne"
-            android:theme="@style/Theme.Project_group_13.NoActionBar" />
-        <activity
-            android:name=".MenuRightActivity"
-            android:label="@string/title_activity_menu_right"
-            android:theme="@style/Theme.Project_group_13.NoActionBar" />
-        <activity
-            android:name=".ui.MenuRightActivity"
-            android:label="@string/title_activity_menu_right"
-            android:theme="@style/Theme.Project_group_13.NoActionBar" />
         <activity android:name=".MainScreen" />
         <activity android:name=".GreetingScreen" />
         <activity android:name=".ForgotPassword" />

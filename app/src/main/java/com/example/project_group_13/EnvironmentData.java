@@ -41,6 +41,7 @@ public class EnvironmentData extends AppCompatActivity {
     private DatabaseReference myRef;
     public String date;
     DataStructure mData;
+    public static int temdata,humdata,uvdata,luxdata;
     private TextView temperature, humidity, uv, timestamp, lux;
     DrawerLayout drawerLayout;
     @Override
@@ -50,7 +51,7 @@ public class EnvironmentData extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer_layout);
             getDatabase();
             findAllViews();
-            reterieveData();
+            retrieveData();
     }
     private void findAllViews(){
         uv = findViewById(R.id.uv);
@@ -68,9 +69,10 @@ public class EnvironmentData extends AppCompatActivity {
         myRef = database.getReference(path);
     }
 
-    public void reterieveData(){
+    public void retrieveData(){
         // TODO: Get the data on a single node.
         myRef.addChildEventListener(new ChildEventListener() {
+
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 DataStructure ds = dataSnapshot.getValue(DataStructure.class);
@@ -82,6 +84,13 @@ public class EnvironmentData extends AppCompatActivity {
                 // Convert from timestamp to Date and time
                 timestamp.setText(convertTimestamp(Long.toString(ds.getTimestamp())));
 
+                // Take value to make advise
+                temdata = (int) ds.getTemperature();
+                humdata = (int) ds.getHumidity();
+                luxdata = (int) ds.getLight();
+                uvdata = (int) ds.getUV();
+
+                //Make a progressBar
                 pg_temp = (ProgressBar)findViewById(R.id.pgtem);
                 pg_temp.setProgress((int) ds.getTemperature());
 
@@ -183,7 +192,7 @@ public class EnvironmentData extends AppCompatActivity {
         redirectActivity(this, EnvironmentData.class);
     }
 
-    public void ManualSetup(View view){
+    public void Advise(View view){
         //redirect activity to about us
         redirectActivity(this, Advise.class);
     }

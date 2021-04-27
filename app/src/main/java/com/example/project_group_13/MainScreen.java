@@ -36,7 +36,7 @@ public class MainScreen extends AppCompatActivity {
         redirectActivity(this, EnvironmentData.class);
     }
 
-    public void ManualSetup(View view){
+    public void Advise(View view){
         //redirect activity to about us
         redirectActivity(this, Advise.class);
     }

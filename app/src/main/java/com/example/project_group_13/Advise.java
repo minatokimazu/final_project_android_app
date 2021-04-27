@@ -11,12 +11,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import com.example.project_group_13.EnvironmentData;
+
 
 public class Advise extends AppCompatActivity {
     DrawerLayout drawerLayout;
     private TextView time;
-    String date1;
+    private int lux = EnvironmentData.luxdata;
+    private int uv = EnvironmentData.uvdata;
+    private int temp = EnvironmentData.temdata;
+    private int hum = EnvironmentData.humdata;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +27,41 @@ public class Advise extends AppCompatActivity {
         setContentView(R.layout.activity_advise);
         drawerLayout = findViewById(R.id.drawer_layout);
         time = findViewById(R.id.info1);
+        giveAdvise(lux,uv,temp,hum);
     }
-    
+
+    private static void sleep(long millies) {
+        try {
+            Thread.sleep(millies);
+        } catch (InterruptedException e) {
+            System.out.println("Thread is interrupted");
+            Thread.currentThread().interrupt();
+        }
+    }
+
+    public void giveAdvise(int lux, int uv, int temp, int hum){
+        while (true){
+            String advise_temp = "The weather is";
+            String advise_uv = "";
+            String advise_lux = "";
+            String advise_hum = "";
+
+            // Condition for humidity
+            if (hum < 20){
+                advise_hum += "";
+            }
+            if ((hum >= 20) && (hum < 60)){
+
+            }
+            if (hum >= 60){
+
+            }
+
+            sleep(5000);
+
+        }
+    }
+
     public void ClickMenu(View view){
         //Open drawer
         openDrawer(drawerLayout);
@@ -41,7 +77,7 @@ public class Advise extends AppCompatActivity {
         redirectActivity(this, EnvironmentData.class);
     }
 
-    public void ManualSetup(View view){
+    public void Advise(View view){
         //redirect activity to about us
         redirectActivity(this, Advise.class);
     }
