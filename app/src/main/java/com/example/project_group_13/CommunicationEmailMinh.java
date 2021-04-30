@@ -35,7 +35,7 @@ public class CommunicationEmailMinh extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(CommunicationEmailMinh.this,savechange.getText().toString(),Toast.LENGTH_SHORT).show();;
+                        Toast.makeText(CommunicationEmailMinh.this,savechange.getText().toString(),Toast.LENGTH_SHORT).show();
                     }
                 }
         );

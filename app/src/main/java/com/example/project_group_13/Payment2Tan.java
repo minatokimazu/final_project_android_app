@@ -31,7 +31,7 @@ public class Payment2Tan extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(Payment2Tan.this,savechange.getText().toString(),Toast.LENGTH_SHORT).show();;
+                        Toast.makeText(Payment2Tan.this,savechange.getText().toString(),Toast.LENGTH_SHORT).show();
                     }
                 }
         );

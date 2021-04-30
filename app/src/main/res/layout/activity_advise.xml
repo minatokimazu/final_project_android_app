@@ -7,64 +7,125 @@
     android:layout_height="match_parent"
     tools:context=".Advise">
 
+
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <include layout="@layout/main_toolbar" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#EBF3EE">
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:id="@+id/Scroll_View">
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="48dp"
-                android:fontFamily="monospace"
-                android:gravity="center_horizontal"
-                android:lineSpacingExtra="10sp"
-                android:text="What should you do today!!"
-                android:textColor="@color/word_1"
-                android:textSize="25sp"
-                android:textStyle="normal"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView7"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.494"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.44" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/LinearLayout">
 
-            <TextView
-                android:id="@+id/info1"
-                android:layout_width="383dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="112dp"
-                android:layout_marginEnd="4dp"
-                android:fontFamily="monospace"
-                android:lineSpacingExtra="8sp"
-                android:text="The weather is cool, not too much sunny. You should let the tree enjoy the sun till 19:00 p.m because the sunlight still affect till 19:00pm. Today, perfect thing you could do is pouring water 2 times, which seperate from 6 hours per time. The humidity of the environment show that the wealther is wet so don't worry if your plants could not have enough water. "
-                android:textColor="@color/word_1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.533"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                app:layout_constraintVertical_bias="0.0" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="@+id/Scroll_View"
+                    android:animateLayoutChanges="true"
+
+                    tools:layout_editor_absoluteY="1dp">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="monospace"
+                        android:gravity="center_horizontal"
+                        android:text="What should you do today!!"
+                        android:textColor="@color/notifycolor"
+                        android:textSize="24sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.485"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.44" />
+
+                    <TextView
+                        android:id="@+id/u_advise"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="serif"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="40dp"
+                        android:text="*uv advise*"
+                        android:textColor="#0F52BA"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/l_advise" />
+
+                    <TextView
+                        android:id="@+id/h_advise"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="serif"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="10dp"
+                        android:text="*humidity advise*"
+                        android:textColor="#0F52BA"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/t_advise" />
+
+                    <TextView
+                        android:id="@+id/t_advise"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="36dp"
+                        android:fontFamily="serif"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="10dp"
+                        android:text="*temperature advise*"
+                        android:textColor="#0F52BA"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                    <TextView
+                        android:id="@+id/l_advise"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="serif"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="10dp"
+                        android:text="*light advise*"
+                        android:textColor="#0F52BA"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/h_advise" />
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 
     <RelativeLayout
         android:layout_width="300dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/white">
+        android:background="#EBF3EE">
 
 
         <include layout="@layout/main_nav_drawer" />

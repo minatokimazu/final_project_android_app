@@ -33,7 +33,7 @@ public class SecurityNg extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(SecurityNg.this,savechange.getText().toString(),Toast.LENGTH_SHORT).show();;
+                        Toast.makeText(SecurityNg.this,savechange.getText().toString(),Toast.LENGTH_SHORT).show();
                     }
                 }
         );

@@ -119,6 +119,25 @@ public class EnvironmentData extends AppCompatActivity {
                 temperature.setText("Temperature: "+ds.getTemperature());
                 humidity.setText("Humidity: " + ds.getHumidity());
                 uv.setText("UV: " + ds.getUV());
+                // Take value to make advise
+                temdata = (int) ds.getTemperature();
+                humdata = (int) ds.getHumidity();
+                luxdata = (int) ds.getLight();
+                uvdata = (int) ds.getUV();
+
+                //Make a progressBar
+                pg_temp = (ProgressBar)findViewById(R.id.pgtem);
+                pg_temp.setProgress((int) ds.getTemperature());
+
+                pg_light = (ProgressBar)findViewById(R.id.pglux);
+                pg_light.setProgress((int) ds.getLight());
+
+                pg_hum = (ProgressBar)findViewById(R.id.pghum);
+                pg_hum.setProgress((int) ds.getHumidity());
+
+                pg_uv = (ProgressBar)findViewById(R.id.pguv);
+                pg_uv.setProgress((int) ds.getUV());
+
 
                 // Convert from timestamps to Date and time
                 date = convertTimestamp(Long.toString(ds.getTimestamp()));
